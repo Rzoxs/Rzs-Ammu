@@ -1,7 +1,10 @@
 fx_version 'cerulean'
 games { 'gta5' };
 
+shared_script "config.lua"
+
 client_scripts {
+    -- RageUI
     "src/RMenu.lua",
     "src/menu/RageUI.lua",
     "src/menu/Menu.lua",
@@ -11,13 +14,11 @@ client_scripts {
     "src/menu/items/*.lua",
     "src/menu/panels/*.lua",
     "src/menu/windows/*.lua",
-    
-    "config.lua",
-    "client.lua",
+
+    "cl_*.lua",
 }
 
 server_scripts {
     "@mysql-async/lib/MySQL.lua",
-    "config.lua",
-    "server.lua",
+    "sv_*.lua",
 }
