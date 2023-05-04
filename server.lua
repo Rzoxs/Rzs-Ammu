@@ -1,9 +1,9 @@
 local ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-ESX.RegisterServerCallback('rzs_ammu:buy', function(source, cb, total, table)
+ESX.RegisterServerCallback('rzs_ammu:buy', function(source, cb, table)
     local xPlayer = ESX.GetPlayerFromId(source)
-    local total = total
+    local total = Total()
     if xPlayer.getMoney() >= total then
         xPlayer.removeMoney(total)
         for _,v in pairs(table) do
@@ -20,3 +20,11 @@ ESX.RegisterServerCallback('rzs_ammu:buy', function(source, cb, total, table)
         cb(false)
     end
 end)
+
+Total = function(val)
+    local total = 0
+    for _,v in pairs(val) do
+        total = total + (v.price)
+    end
+    return total
+end
