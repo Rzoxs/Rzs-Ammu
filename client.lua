@@ -109,7 +109,7 @@ function AmmunationMenu(idAmmu)
                                     if response then
                                         RZS.Basket = {}
                                     end
-                                end, RZS.Basket)
+                                end, RZS.Basket, _)
                             end
                         })
                     end
