@@ -103,13 +103,13 @@ function AmmunationMenu(idAmmu)
                             })
                         end
                         RageUI.line()
-                        RageUI.Button("Achetez", nil, {RightLabel = "Total : ~g~"..Total().." "..ConfigAmmu.money.."~w~→"}, true, {
+                        RageUI.Button("Acheter", nil, {RightLabel = "Total : ~g~"..Total().." "..ConfigAmmu.money.."~w~→"}, true, {
                             onSelected = function()
                                 ESX.TriggerServerCallback('rzs_ammu:buy', function(response)
                                     if response then
                                         RZS.Basket = {}
                                     end
-                                end, Total(), RZS.Basket)
+                                end, RZS.Basket)
                             end
                         })
                     end
