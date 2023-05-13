@@ -22,3 +22,8 @@ server_scripts {
     "@mysql-async/lib/MySQL.lua",
     "sv_*.lua",
 }
+
+dependencies {
+    "es_extended",
+    "esx_license",
+}
