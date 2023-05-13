@@ -21,9 +21,9 @@ DrawMaker = function(coords)
 end
 
 CheckPPACategorie = function(a, b)
-    if a == b then
-        return true
-    else
+    if a == true and b == false then
         return false
+    else
+        return true
     end
 end
