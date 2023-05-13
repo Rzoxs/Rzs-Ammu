@@ -39,7 +39,7 @@ Tableau des différentes catégories d'armes et de munitions disponibles dans ch
 - `Categories` : un tableau des différentes catégories d'armes et de munitions disponibles. Chaque catégorie est définie par un tableau contenant les éléments suivants :
   - `id` : l'identifiant unique de la catégorie.
   - `label` : le libellé de la catégorie.
-  - `ppa` : booléen indiquant si la catégorie doit être visible dans le menu d'achat.
+  - `ppa` : booléen indiquant si la catégorie est accessible uniquement avec le permis port d'armes.
 - `content` : un tableau contenant les différents éléments disponibles dans chaque catégorie. Chaque élément est défini par un tableau contenant les propriétés suivantes :
   - `type` : le type d'élément (weapon ou item).
   - `name` : le nom de l'élément.
