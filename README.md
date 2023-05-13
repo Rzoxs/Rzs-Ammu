@@ -61,7 +61,7 @@ CategoriesComponents = {
             },
             content = {
                 ["weapons"] = {
-                    -- {type, name, label, prix, quantité}
+                    -- {type, name, label, prix}
                     {type = "weapon", name = "WEAPON_PISTOL", label = "Pistolet", price = 200},
                     {type = "weapon", name = "WEAPON_PISTOL_MK2", label = "Pistolet MK2", price = 500},
                     {type = "weapon", name = "WEAPON_APPISTOL", label = "Pistolet AP", price = 200},
