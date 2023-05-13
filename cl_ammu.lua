@@ -165,9 +165,9 @@ CreateThread(function()
                     ESX.ShowHelpNotification("Appuyez sur ~INPUT_CONTEXT~ pour ouvrir l'Ammunation")
                     if IsControlJustPressed(0, 38) then
                         AmmunationMenu(v.id)
-                        ESX.TriggerServerCallback("esx_license:getLicense", function(cb) 
+                        ESX.TriggerServerCallback("esx_license:checkLicense", function(cb) 
                             RZS.PPA = cb
-                        end, "weapon")
+                        end, GetPlayerServerId(PlayerId()), "weapon")
                     end
                 end
             end
