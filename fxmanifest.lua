@@ -24,6 +24,5 @@ server_scripts {
 }
 
 dependencies {
-    "es_extended",
-    "esx_license",
+    "es_extended"
 }
