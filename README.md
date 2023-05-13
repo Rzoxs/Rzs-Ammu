@@ -1,14 +1,12 @@
+# Configuration Ammunation Documentation
 
-
-# ConfigAmmu Documentation
-
-The `ConfigAmmu` table is used to configure ammunition shops in a video game. It contains the following fields:
+La configuration est définie dans le fichier `config.lua`. Voici une description des différentes options :
 
 ## Coords
-An array of tables, each containing the following fields:
-- `pos` - The location of the ammunition shop as a vector3.
-- `blips` - A boolean indicating whether to show a blip on the map for the ammunition shop.
-- `id` - A unique identifier for the ammunition shop.
+Tableau des coordonnées des magasins d'armes. Chaque magasin est défini par un objet avec les propriétés suivantes :
+- `pos` : la position du magasin sous forme de vecteur.
+- `blips` : booléen indiquant si un blip doit être affiché sur la carte pour ce magasin.
+- `id` : un identifiant unique pour chaque magasin.
 
 Example:
 ```lua
@@ -20,7 +18,7 @@ Coords = {
 ```
 
 ## MaxAmmo
-An integer representing the maximum amount of ammunition a player can carry.
+La quantité maximum de munitions qu'un joueur peut acheter pour chaque arme.
 
 Example:
 ```lua
@@ -28,7 +26,7 @@ MaxAmmo = 250
 ```
 
 ## money
-A string representing the currency symbol used in the shop.
+La devise utilisée pour afficher les prix.
 
 Example:
 ```lua
@@ -36,17 +34,17 @@ money = "$"
 ```
 
 ## CategoriesComponents
-An array of tables, each representing an ammunition shop and containing the following fields:
-- `id` - A unique identifier for the ammunition shop.
-- `Categories` - An array of tables, each representing a category of items in the shop and containing the following fields:
-  - `id` - A unique identifier for the category.
-  - `label` - The label to be displayed for the category.
-  - `ppa` - A boolean indicating whether to display the category by default.
-- `content` - A table representing the items in the shop, with the keys being the categories and the values being an array of tables, each representing an item and containing the following fields:
-  - `type` - The type of item (e.g., weapon, item).
-  - `name` - The name of the item as defined in the game files.
-  - `label` - The label to be displayed for the item.
-  - `price` - The price of the item.
+Tableau des différentes catégories d'armes et de munitions disponibles dans chaque magasin. Chaque magasin est défini par un objet avec les propriétés suivantes :
+- `id` : l'identifiant unique du magasin auquel cette configuration s'applique.
+- `Categories` : un tableau des différentes catégories d'armes et de munitions disponibles. Chaque catégorie est définie par un tableau contenant les éléments suivants :
+  - `id` : l'identifiant unique de la catégorie.
+  - `label` : le libellé de la catégorie.
+  - `ppa` : booléen indiquant si la catégorie doit être visible dans le menu d'achat.
+- `content` : un tableau contenant les différents éléments disponibles dans chaque catégorie. Chaque élément est défini par un tableau contenant les propriétés suivantes :
+  - `type` : le type d'élément (weapon ou item).
+  - `name` : le nom de l'élément.
+  - `label` : le libellé de l'élément.
+  - `price` : le prix de l'élément.
 
 Example:
 ```lua
